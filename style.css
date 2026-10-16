@@ -541,3 +541,9 @@ padding: 60px 38px 52px;
     margin-top: 12px;
   }
 }
+/* Один свиток в ряд на телефоне */
+@media (max-width: 520px) {
+  .scroll-grid {
+    grid-template-columns: 1fr;
+  }
+}
