@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#35483d">
+  <title>История детской души — книжный клуб</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-frame" aria-hidden="true"><span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span></div>
+  <main class="book-club">
+    <header class="hero">
+      <p class="eyebrow">КНИЖНЫЙ КЛУБ</p>
+      <h1>История детской души</h1>
+      <p class="author">Мария Корелли</p>
+      <div class="gold-line" aria-hidden="true"><span></span></div>
+      <p class="instruction">Выбери свиток, чтобы открыть вопрос</p>
+      <p class="sub-instruction">Девять вопросов · одна книга · разные взгляды</p>
+    </header>
+
+    <section class="progress-area" aria-live="polite">
+      <div class="progress-copy"><span id="progressText">Выбрано: 0 из 9</span><span id="progressPercent">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </section>
+
+    <section class="scroll-grid" id="scrollGrid" aria-label="Свитки с вопросами"></section>
+
+    <section class="finished-message" id="finishedMessage" hidden>
+      <span class="feather-mark" aria-hidden="true">✒</span>
+      <h2>Все вопросы открыты</h2>
+      <p>Спасибо за разговор, внимательное чтение и разные взгляды.</p>
+    </section>
+
+    <div class="reset-wrap"><button class="reset-button" id="resetButton" type="button">Начать заново</button></div>
+
+    <footer class="footer">
+      <span class="footer-line"></span>
+      <span class="footer-mark" aria-hidden="true">✒</span>
+      <p>Читайте внимательно. Спорьте бережно. Думайте глубоко.</p>
+      <span class="footer-line"></span>
+    </footer>
+  </main>
+
+  <dialog class="question-dialog" id="questionDialog" aria-labelledby="dialogTitle">
+    <button class="close-button" id="closeDialog" type="button" aria-label="Закрыть вопрос">×</button>
+    <div class="dialog-ornament" aria-hidden="true"><span class="ornament-line"></span><span class="leaf-mark">❧</span><span class="ornament-line"></span></div>
+    <p class="dialog-number" id="dialogNumber">ВОПРОС 01</p>
+    <h2 id="dialogTitle">Вопрос</h2>
+    <div class="dialog-divider" aria-hidden="true"><span></span></div>
+    <p class="dialog-note">Время обсудить и услышать разные мнения</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
